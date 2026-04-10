@@ -1,23 +1,22 @@
-# Stake Engine Approval Index
+# Sidebets Blackjack
 
-Use this folder as the cloud-workspace entrypoint for submission prep.
+Desktop submission build.
 
-## Core docs
-- [PROJECT_README.md](./PROJECT_README.md)
-- [APPROVAL_TASK_LIST.md](./APPROVAL_TASK_LIST.md)
-- [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)
-- [HANDOFF_NEW_CHAT_2026-04-10_USAGE.md](./HANDOFF_NEW_CHAT_2026-04-10_USAGE.md)
-- [LIVE_DEPLOYMENT.md](./LIVE_DEPLOYMENT.md)
+Absolute path:
+- `/Users/gerryturnbow/submittal-desktop-done/game`
 
-## Canonical links
-- GitHub repo: <https://github.com/confusedonut22/chadjack>
-- Production alias: <https://jackchad.vercel.app>
-- Latest deployment: <https://jackchad-689truu3t-confusedonut22s-projects.vercel.app>
+Use this repo for:
+- desktop submission packaging
+- desktop parity/readiness checks
+- desktop Vercel previews that reflect the current submission candidate
 
-## Canonical workspace
-- `/Users/gerryturnbow/Downloads/submittal/jackchad-worktree`
+Canonical rules source when desktop and mobile disagree:
+- `/Users/gerryturnbow/chadjack/game`
 
-## Notes
-- `PROJECT_README.md` is the best quick overview of the submission package.
-- `APPROVAL_TASK_LIST.md` is the practical approval tracker.
-- `SUBMISSION_CHECKLIST.md` is the current readiness checklist.
+## Build
+
+```bash
+npm install
+npm test
+npm run build
+```

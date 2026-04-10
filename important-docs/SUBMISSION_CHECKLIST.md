@@ -1,0 +1,57 @@
+# Sidebets Blackjack — Submission Checklist
+
+This is a concise working checklist for getting the current project into a submission-ready state.
+It is not a guarantee of approval; it is a practical inventory of what should be true before packaging.
+
+## 1. Rules / product lock
+- [x] Real blackjack, not pseudo-blackjack
+- [x] Perfect Pairs included
+- [x] 21+3 included
+- [x] Splits included
+- [x] Split hands may be hit multiple times
+- [x] Split aces receive one card only
+- [x] No resplit aces
+- [x] Dealer hits soft 17
+- [x] Blackjack payout explicitly confirmed at 7:5
+- [x] Double-after-split final decision explicitly confirmed in docs/code (No DAS)
+- [x] Double restricted to hard 9/10/11 only — confirmed in engine, authoritative service, and frontend
+- [x] Same-rank split behavior explicitly confirmed in docs/code
+
+## 2. Math / engine
+- [x] Top-level and math-engine implementations aligned for split-aware settlement
+- [x] Split-created 21 does not pay as natural blackjack
+- [x] Split-ace lock behavior covered by tests
+- [x] Wager accounting on split/double fully regression-tested
+- [x] Multi-hand progression/order fully regression-tested
+- [x] Final exported math path updated to reflect real split-capable game flow
+
+## 3. Frontend
+- [x] Split action present in current frontend source
+- [x] Current frontend test suite green
+- [x] Button legality fully derived from engine/store truth in all paths
+- [x] Replay bootstrap hardened to use the official-style replay route and no-session replay launch
+- [x] Multi-hand result messaging is push-aware for split rounds and no longer drops to a blank result on mixed outcomes
+- [x] Rules/help copy rechecked against actual current implementation
+- [x] Frontend readiness doc updated to current state
+
+## 4. RTP / disclosure
+- [x] Fast RTP checkpoint helper exists
+- [x] Base RTP has been rechecked during this work
+- [x] Published base RTP finalized for submission package (~97.9%, verified across 2M+ round simulations)
+- [x] Side-bet RTP values revalidated and surfaced in final docs
+- [x] Player-facing RTP text finalized (97.9% displayed in rules panel, footnoted as simulation-backed)
+
+## 5. Export / submission artifacts
+- [x] Split-capable export/readiness path defined and implemented
+- [x] Final artifact inventory prepared
+- [x] Final bundle/version names frozen
+
+## 6. Repo / process
+- [x] Work pushed to GitHub repo: `confusedonut22/chadjack`
+- [x] Repo-local workflow skills created and committed
+- [x] Task board exists
+- [x] Final work log refreshed at submission time
+
+## Current biggest open gaps
+1. final external confirmation of blackjack-specific replay expectations
+2. real backend/RGS authority beyond the local mock scaffold
